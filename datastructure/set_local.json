@@ -1,0 +1,30 @@
+{
+  "run": [
+    {
+      "method": "net",
+      "params": {
+        "url": "https://random-word-api.herokuapp.com/word"
+      }
+    },
+    {
+      "method": "set",
+      "params": {
+        "local": {
+          "word{{Date.now()}}": "{{input}}"
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "json2": "{{local}}"
+      }
+    },
+    {
+      "method": "goto",
+      "params": {
+        "index": "{{Object.keys(local).length > 3 ? null : 0}}"
+      }
+    }
+  ]
+}

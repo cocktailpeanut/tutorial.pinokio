@@ -1,0 +1,18 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Enter command",
+      "type": "notify",
+      "form": [{
+        "key": "command",
+        "placeholder": "Enter a command and press enter"
+      }]
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "message": "{{input.command}}"
+    }
+  }]
+}

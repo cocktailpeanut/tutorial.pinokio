@@ -1,0 +1,21 @@
+{
+  "items": [],
+  "run": [
+    {
+      "method": "set",
+      "params": {
+        "self": {
+          "push_self.json": {
+            "items": "{{self.items.concat(self.items.length)}}"
+          }
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "json": "{{self.items}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "run": [{
+    "method": "net",
+    "params": {
+      "method": "post",
+      "url": "https://postman-echo.com/post",
+      "data": {
+        "hello": "world"
+      }
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": "{{input}}"
+    }
+  }]
+}

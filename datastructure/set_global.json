@@ -1,0 +1,21 @@
+{
+  "run": [
+    {
+      "method": "set",
+      "params": {
+        "local": {
+          "counter": "{{local.counter ? local.counter+1 : 1}}"
+        },
+        "global": {
+          "counter": "{{global.counter ? global.counter+1 : 1}}"
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "raw": "global: {{global.counter}}   local:  {{local.counter}}"
+      }
+    }
+  ]
+}

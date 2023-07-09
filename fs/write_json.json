@@ -1,0 +1,21 @@
+{
+  "run": [{
+    "method": "net",
+    "params": {
+      "method": "get",
+      "url": "https://jsonplaceholder.typicode.com/users"
+    },
+    "returns": "local.users"
+  }, {
+    "method": "log",
+    "params": {
+      "json2": "{{local.users}}"
+    }
+  }, {
+    "method": "fs.write",
+    "params": {
+      "path": "users.json",
+      "json": "{{local.users}}"
+    }
+  }]
+}

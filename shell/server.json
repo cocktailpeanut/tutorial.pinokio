@@ -1,0 +1,62 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "mkdir helloserver"
+    },
+    "notify": true
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "npm init -y",
+      "path": "helloserver"
+    },
+    "notify": true
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "npm install express",
+      "path": "helloserver"
+    },
+    "notify": true
+  }, {
+    "method": "fs.write",
+    "params": {
+      "path": "helloserver/index.js",
+      "text": [
+        "const express = require('express');",
+        "const app = express();",
+        "app.get('/', function (req, res) {",
+        "  res.send('<h1>Hello World</h1>');",
+        "});",
+        "console.log('starting server')",
+        "app.listen(3000, () => { console.log ('server started') });"
+      ],
+      "join": "\n"
+    },
+    "notify": true
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "helloserver"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "node index",
+      "on": [{
+        "event": "/server started/",
+        "return": true
+      }]
+    },
+    "notify": true
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "http://localhost:3000",
+      "target": "_blank"
+    }
+  }, {
+    "method": "process.wait"
+  }]
+}

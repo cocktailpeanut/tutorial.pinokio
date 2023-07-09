@@ -1,0 +1,27 @@
+{
+  "run": [{
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": 0
+      }
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{local.counter}}"
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": "{{local.counter+1}}"
+      }
+    }
+  }, {
+    "method": "goto",
+    "params": {
+      "index": "{{ local.counter > 15 ? null : 1 }}"
+    }
+  }]
+}

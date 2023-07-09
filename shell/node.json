@@ -1,0 +1,34 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "node\n",
+      "on": [{
+        "event": "/.*(> ).*/gs",
+        "return": null
+      }]
+    }
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "os.platform()\n",
+      "on": [{
+        "event": "/'(.+)'.*(> )/gs",
+        "return": {
+          "raw": "{{event.matches[0][1]}}"
+        }
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": ".exit",
+      "on": [{
+        "event": null,
+        "return": null
+      }]
+    }
+  }]
+}

@@ -1,0 +1,14 @@
+{
+  "run": [{
+    "method": "goto",
+    "params": {
+      "index": 1,
+      "input": "3"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{input}}"
+    }
+  }]
+}

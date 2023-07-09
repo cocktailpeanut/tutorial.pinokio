@@ -1,0 +1,10 @@
+{
+  "run": [{
+    "method": "notify",
+    "params": {
+      "html": "<img src='http://localhost:4200/pinokio-black.png'>",
+      "href": "https://pinokio.computer",
+      "target": "_blank"
+    }
+  }]
+}

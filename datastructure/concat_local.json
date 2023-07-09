@@ -1,0 +1,33 @@
+{
+  "items": [1,2,3],
+  "run": [
+    {
+      "method": "set",
+      "params": {
+        "local": {
+          "items": []
+        }
+      }
+    },
+    {
+      "method": "set",
+      "params": {
+        "local": {
+          "items": "{{local.items.concat(self.items)}}"
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "json": "{{local.items}}"
+      }
+    },
+    {
+      "method": "goto",
+      "params": {
+        "index": "{{local.items.length > 12 ? null : 1}}"
+      }
+    }
+  ]
+}

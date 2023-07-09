@@ -1,0 +1,14 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "ls",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }]
+}

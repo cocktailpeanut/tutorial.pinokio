@@ -1,0 +1,10 @@
+{
+  "run": [{
+    "method": "notify",
+    "params": {
+      "html": "clck to open Reddit",
+      "href": "https://reddit.com",
+      "target": "_blank"
+    }
+  }]
+}

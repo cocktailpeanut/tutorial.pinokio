@@ -1,0 +1,17 @@
+{
+  "run": [{
+    "method": "notify",
+    "params": {
+      "html": "[Try] clck to open Pinokio in a new window",
+      "href": "/",
+      "target": "_blank",
+      "features": "app"
+    }
+  }, {
+    "method": "notify",
+    "params": {
+      "html": "[Try] clck to visit another example",
+      "href": "image_notification.json"
+    }
+  }]
+}

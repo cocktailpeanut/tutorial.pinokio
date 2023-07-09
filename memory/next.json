@@ -1,0 +1,18 @@
+{
+  "run": [{
+    "method": "log",
+    "params": {
+      "raw": "running instruction {{current}}. next instruction is {{next}}"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "running instruction {{current}}. next instruction is {{next}}"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "running instruction {{current}}. next instruction is {{next}}"
+    }
+  }]
+}

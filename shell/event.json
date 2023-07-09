@@ -1,0 +1,24 @@
+{
+  "run": [{
+    "method": "shell.start",
+    "params": {
+      "id": "{{cwd}}"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "id": "{{cwd}}",
+      "message": "curl https://jsonplaceholder.typicode.com/users",
+      "on": [{
+        "event": "/.*(\\[.*\\]).*/gs",
+        "return": "{{event.matches[0][1]}}"
+      }]
+    }
+  }, {
+    "method": "fs.write",
+    "params": {
+      "path": "users.json",
+      "text": "{{input}}"
+    }
+  }]
+}

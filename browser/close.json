@@ -1,0 +1,29 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "URL",
+      "type": "notify",
+      "form": [{
+        "key": "uri",
+        "placeholder": "enter a URL to open"
+      }]
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "{{input.uri}}",
+      "target": "new"
+    }
+  }, {
+    "method": "process.wait",
+    "params": {
+      "sec": 2
+    }
+  }, {
+    "method": "browser.close",
+    "params": {
+      "target": "new"
+    }
+  }]
+}

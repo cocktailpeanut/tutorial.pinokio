@@ -1,0 +1,14 @@
+{
+  "run": [{
+    "method": "net",
+    "params": {
+      "method": "get",
+      "url": "https://jsonplaceholder.typicode.com/users"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": "{{input}}"
+    }
+  }]
+}

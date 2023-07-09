@@ -1,0 +1,41 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "npm init",
+      "on": [{
+        "event": "/.*: /",
+        "return": true
+      }]
+    }
+  }, {
+    "method": "process.wait",
+    "params": {
+      "sec": 1
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "",
+      "on": [{
+        "event": "/.+: /",
+        "return": 2
+      }, {
+        "event": null,
+        "return": null
+      }, {
+        "event": "/Is this OK/",
+        "return": 2
+      }]
+    },
+    "notify": true
+  }, {
+    "method": "goto",
+    "params": {
+      "index": "{{input}}"
+    },
+    "notify": true
+  }]
+}

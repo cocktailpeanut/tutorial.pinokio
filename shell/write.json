@@ -1,0 +1,24 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "{{String(Math.floor(10 * Math.random()))}}",
+      "on": [{
+        "event": "/.*/",
+        "return": true
+      }]
+    }
+  }, {
+    "method": "process.wait",
+    "params": {
+      "sec": 1
+    }
+  }, {
+    "method": "goto",
+    "params": {
+      "index": 1
+    }
+  }]
+}

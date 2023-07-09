@@ -1,0 +1,59 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "mkdir test"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "test"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "npm init",
+      "on": [{
+        "event": "/^(.+):/gm",
+        "return": "{{event.matches[0][1]}}"
+      }]
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "local": {
+        "key": "id_{{Buffer.from(input).toString('hex')}}",
+        "title": "{{input}}"
+      }
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "{{local.title}}",
+      "form": [{
+        "key": "{{local.key}}"
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{input[local.key]}}",
+      "path": "test",
+      "on": [{
+        "event": "/^(.+):/gm",
+        "return": {
+          "index": 3,
+          "input": "{{event.matches[0][1]}}"
+        }
+      }, {
+        "event": null,
+        "return": {
+          "index": null
+        }
+      }]
+    }
+  }, {
+    "method": "goto",
+    "params": "{{input}}"
+  }]
+}

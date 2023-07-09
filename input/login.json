@@ -1,0 +1,20 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Login",
+      "form": [{
+        "key": "username",
+        "title": "username"
+      }, {
+        "key": "password",
+        "title": "password"
+      }]
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "local": "{{input}}"
+    }
+  }]
+}

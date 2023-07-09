@@ -1,0 +1,17 @@
+{
+  "run": [{
+    "method": "set",
+    "params": {
+      "self": {
+        "counter.json": {
+          "count": "{{self.counter && self.counter.count ? self.counter.count+1 : 1}}"
+        }
+      }
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json": "{{self.counter}}"
+    }
+  }]
+}

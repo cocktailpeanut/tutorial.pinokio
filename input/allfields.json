@@ -1,0 +1,28 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Setup",
+      "type": "notify",
+      "form": [{
+        "key": "username",
+        "description": "The login username",
+        "placeholder": "enter username",
+        "title": "username"
+      }, {
+        "key": "password",
+        "description": "The login password",
+        "placeholder": "enter login password",
+        "type": "password",
+        "title": "password"
+      }]
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "self": {
+        "config.json": "{{input}}"
+      }
+    }
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Formless Input",
+      "type": "notify",
+      "description": "Install and come back.<br><br><a class='inverse btn' target='_blank' windowFeatures='self' href='/?mode=download&url=https://github.com/malfunctionize/kerneldemo'>Install</a>"
+    }
+  }, {
+    "method": "notify",
+    "params": {
+      "html": "OK"
+    }
+  }]
+}

@@ -1,0 +1,50 @@
+{
+  "run": [
+    {
+      "method": "net",
+      "params": {
+        "url": "https://jsonplaceholder.typicode.com/posts/1"
+      },
+      "returns": "local.post"
+    },
+    {
+      "method": "log",
+      "params": {
+        "json2": "{{local.post}}"
+      }
+    },
+    {
+      "method": "set",
+      "params": {
+        "self": {
+          "rm_self.json": {
+            "post": "{{local.post}}"
+          }
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "json2": "{{self.post}}"
+      }
+    },
+    {
+      "method": "rm",
+      "params": {
+        "self": {
+          "rm_self.json": [
+            "post.title",
+            "post.body"
+          ]
+        }
+      }
+    },
+    {
+      "method": "log",
+      "params": {
+        "json2": "{{self.post}}"
+      }
+    }
+  ]
+}

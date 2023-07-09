@@ -1,0 +1,14 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'dir' : 'ls'}}"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'dir /A /S' : 'ls -las'}}",
+      "path": ".."
+    }
+  }]
+}

@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "load",
+    "params": {
+      "prompt": "./prompt.json",
+      "self": "./local_load.json"
+    }
+  }]
+}

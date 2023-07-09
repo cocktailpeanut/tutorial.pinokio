@@ -1,0 +1,35 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "npx http-server\n",
+      "on": [{
+        "event": "/.+/",
+        "return": true
+      }]
+    },
+    "notify": true
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "\n",
+      "on": [{
+        "event": "/.+/",
+        "return": true
+      }]
+    },
+    "notify": true
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "http://127.0.0.1:8080",
+      "target": "_blank"
+    },
+    "notify": true
+  }, {
+    "method": "process.wait",
+    "notify": true
+  }]
+}

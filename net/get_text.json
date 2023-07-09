@@ -1,0 +1,15 @@
+{
+  "run": [{
+    "method": "net",
+    "params": {
+      "method": "get",
+      "url": "https://ipfs.io/ipfs/Qme2sLfe9ZMdiuWsEtajWMDzx6B7VbjzpSC2VWhtB6GoB1/wiki/Anasayfa.html",
+      "responseType": "text"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{input}}"
+    }
+  }]
+}

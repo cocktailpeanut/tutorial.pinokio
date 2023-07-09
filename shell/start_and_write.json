@@ -1,0 +1,14 @@
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.write",
+    "params": {
+      "message": "ls\n",
+      "on": [{
+        "event": null,
+        "return": "{{event.state}}"
+      }]
+    }
+  }]
+}

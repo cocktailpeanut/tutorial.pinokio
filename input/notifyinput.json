@@ -1,0 +1,23 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Setup",
+      "type": "notify",
+      "form": [{
+        "key": "username",
+        "title": "username"
+      }, {
+        "key": "password",
+        "title": "password"
+      }]
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "self": {
+        "config.json": "{{input}}"
+      }
+    }
+  }]
+}

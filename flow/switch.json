@@ -1,0 +1,37 @@
+{
+  "run": [{
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": 0
+      }
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": "{{local.counter+1}}"
+      }
+    }
+  }, {
+    "method": "goto",
+    "params": {
+      "index": "{{ local.counter%2 === 0 ? 3 : 4 }}"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{local.counter}} is even"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{local.counter}} is odd"
+    }
+  }, {
+    "method": "goto",
+    "params": {
+      "index": "{{ local.counter > 7 ? null : 1 }}"
+    }
+  }]
+}

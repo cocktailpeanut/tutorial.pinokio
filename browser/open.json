@@ -1,0 +1,19 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "URL",
+      "type": "notify",
+      "form": [{
+        "key": "url",
+        "placeholder": "enter a URL to open"
+      }]
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "{{input.url}}",
+      "target": "_blank"
+    }
+  }]
+}

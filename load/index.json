@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "load",
+    "params": {
+      "automatic1111": "https://github.com/malfunctionize/auto.git/start.json",
+      "llama": "https://github.com/malfunctionize/llama.git/example/stable-vicuna-13b-q4_0.json"
+    }
+  }]
+}

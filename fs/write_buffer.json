@@ -1,0 +1,22 @@
+{
+  "run": [{
+    "method": "net",
+    "params": {
+      "method": "get",
+      "url": "https://via.placeholder.com/600/771796",
+      "responseType": "arraybuffer"
+    },
+    "returns": "local.buf"
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{local.buf.toString('base64')}}"
+    }
+  }, {
+    "method": "fs.write",
+    "params": {
+      "path": "img.png",
+      "buffer": "{{local.buf}}"
+    }
+  }]
+}

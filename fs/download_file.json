@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "path": "bitcoin.pdf"
+    }
+  }]
+}

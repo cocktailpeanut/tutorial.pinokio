@@ -1,0 +1,32 @@
+{
+  "run": [{
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": 0
+      }
+    }
+  }, {
+    "method": "set",
+    "params": {
+      "local": {
+        "counter": "{{local.counter+1}}"
+      }
+    }
+  }, {
+    "method": "process.wait",
+    "params": {
+      "sec": 1
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "raw": "{{local.counter}}"
+    }
+  }, {
+    "method": "goto",
+    "params": {
+      "index": "{{ local.counter > 7 ? null : 1 }}"
+    }
+  }]
+}
