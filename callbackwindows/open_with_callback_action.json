@@ -1,0 +1,15 @@
+{
+  "run": [{
+    "method": "input",
+    "params": {
+      "title": "Download PDF",
+      "description":"<a href='/pinokio?uri=https://github.com/cocktailpeanut/tutorial.pinokio.git/fs/download_file.json&action=close&html=successfully downloaded! click to close the window' target='_blank'>Download and come back</a>, and then click Done"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/pinokio?uri=https://github.com/cocktailpeanut/tutorial.pinokio.git/fs/bitcoin.pdf?raw=true",
+      "target": "_blank"
+    }
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "run": [{
+    "method": "browser.open",
+    "params": {
+      "uri": "/pinokio/download?uri=https://github.com/cocktailpeanut/automatic1111.pinokio?html=Install complete! Click to close and continue.&action=close",
+      "target": "_blank",
+      "features": "self"
+    }
+  }]
+}

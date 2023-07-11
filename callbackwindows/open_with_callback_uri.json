@@ -1,0 +1,15 @@
+{
+  "run": [{
+    "method": "browser.open",
+    "params": {
+      "uri": "/pinokio?uri=https://github.com/cocktailpeanut/tutorial.pinokio.git/fs/download_file.json&href=https://google.com&target=_blank&html=successfully downloaded! click to open google",
+      "target": "_blank"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/pinokio?uri=https://github.com/cocktailpeanut/tutorial.pinokio/fs/bitcoin.pdf?raw=true",
+      "target": "_blank"
+    }
+  }]
+}
