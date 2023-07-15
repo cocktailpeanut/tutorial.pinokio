@@ -1,0 +1,13 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "brew install htop"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "htop"
+    }
+  }]
+}
