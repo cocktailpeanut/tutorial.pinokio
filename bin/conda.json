@@ -1,0 +1,37 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "https://github.com/XingangPan/DragGAN.git"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "conda env create -f environment.yml",
+      "path": "DragGAN"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "DragGAN"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda activate stylegan3",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install -r requirements.txt",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }]
+}
