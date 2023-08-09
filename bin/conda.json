@@ -2,7 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/XingangPan/DragGAN.git"
+      "message": "git clone https://github.com/cocktailpeanut/DragGAN.git"
     }
   }, {
     "method": "shell.run",
