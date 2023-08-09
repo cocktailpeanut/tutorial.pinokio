@@ -5,9 +5,9 @@ module.exports = async (kernel) => {
   const vendor = graphics.controllers[0].vendor
   return {
     run: [{
-      "method": "notify",
+      "method": "log",
       "params": {
-        "html": vendor
+        "json2": graphics.controllers
       }
     }, {
       "method": "notify",
