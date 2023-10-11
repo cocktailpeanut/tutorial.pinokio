@@ -1,0 +1,15 @@
+{
+  "requires": [{
+    "name": "brew"
+  }, {
+    "platform": "darwin",
+    "type": "brew",
+    "name": "wget"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "which wget"
+    }
+  }]
+}
