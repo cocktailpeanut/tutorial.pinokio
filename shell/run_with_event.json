@@ -1,0 +1,25 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "ls -las",
+      "on": [{
+        "event": "/(\\S+\\.json)/i",
+        "push": {
+          "chunks": "{{(_.flatten(event.matches.map(x => x.slice(1))))}}"
+        },
+        "set": {
+          "last_file": "{{(_.flatten(event.matches.map(x => x.slice(1))))}}"
+        },
+        "concat": {
+          "files": "{{(_.flatten(event.matches.map(x => x.slice(1))))}}"
+        }
+      }]
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": "{{input.events}}"
+    }
+  }]
+}

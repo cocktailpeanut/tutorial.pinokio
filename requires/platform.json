@@ -1,0 +1,18 @@
+{
+  "requires": [{
+    "platform": "darwin",
+    "type": "brew",
+    "name": "rust"
+  }, {
+    "platform": "win32",
+    "type": "conda",
+    "name": "rust",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "which rust"
+    }
+  }]
+}

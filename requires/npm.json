@@ -1,0 +1,18 @@
+{
+  "requires": [{
+    "name": "nodejs",
+    "type": "conda",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "which npm"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "npx --yes vtop"
+    }
+  }]
+}

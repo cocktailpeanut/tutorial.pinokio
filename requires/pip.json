@@ -1,0 +1,12 @@
+{
+  "requires": [{
+    "type": "pip",
+    "name": "jsonschema"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "pip list"
+    }
+  }]
+}

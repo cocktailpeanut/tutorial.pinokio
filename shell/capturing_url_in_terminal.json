@@ -1,0 +1,28 @@
+{
+  "daemon": true,
+  "requires": [{
+    "type": "conda",
+    "name": "nodejs",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "npx http-server",
+      "daemon": true,
+      "on": [{
+        "event": "/(http:\/\/[0-9.:]+)/",
+        "set": {
+          "url": "{{event.matches[0][1]}}"
+        },
+        "return": true
+      }]
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "{{input.events.url}}",
+      "target": "_blank"
+    }
+  }]
+}
