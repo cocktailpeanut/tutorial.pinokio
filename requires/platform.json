@@ -12,7 +12,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "which rust"
+      "message": "which rustc"
     }
   }]
 }
