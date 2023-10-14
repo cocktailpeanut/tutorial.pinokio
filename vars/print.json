@@ -1,0 +1,13 @@
+{
+  "run": [{
+    "method": "log",
+    "params": {
+      "json2": {
+        "pip": "{{pip}}",
+        "arch": "{{arch}}",
+        "platform": "{{platform}}",
+        "gpu": "{{gpu ? gup : 'none'}}"
+      }
+    }
+  }]
+}
