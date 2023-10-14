@@ -1,0 +1,21 @@
+{
+  "run": [{
+    "description": "Prepend the current context (cwd) to the PATH",
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'echo %PATH%' : 'echo $PATH'}}",
+      "env": {
+        "PATH": ["{{cwd}}"]
+      }
+    }
+  }, {
+    "description": "Should print an error because the PATH should be an array",
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'echo %PATH%' : 'echo $PATH'}}",
+      "env": {
+        "PATH": "{{cwd}}"
+      }
+    }
+  }]
+}

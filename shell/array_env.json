@@ -1,0 +1,12 @@
+{
+  "run": [{
+    "description": "Prepend the current context (cwd) to the PATH",
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'echo %custom_vars%' : 'echo $custom_vars'}}",
+      "env": {
+        "custom_vars": ["abc", "def", "ghi"]
+      }
+    }
+  }]
+}

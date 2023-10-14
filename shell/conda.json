@@ -1,0 +1,39 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": " ",
+      "conda": "test_conda_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'dir' : 'ls'}} test_conda_env/lib/python3.10/site-packages",
+      "conda": "test_conda_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "pip install torch",
+      "conda": "test_conda_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'dir' : 'ls'}} test_conda_env/lib/python3.10/site-packages",
+      "conda": "test_conda_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "conda install numpy -y",
+      "conda": "test_conda_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'dir' : 'ls'}} test_conda_env/lib/python3.10/site-packages",
+      "conda": "test_conda_env"
+    }
+  }]
+}

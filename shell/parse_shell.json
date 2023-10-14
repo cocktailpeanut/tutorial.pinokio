@@ -1,0 +1,16 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "ls -las"
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": {
+        "files": "{{_.flatten([...input.response.matchAll(/\\S+\\.json/gi)])}}",
+        "folders": "{{[...input.response.matchAll(/drwx.+\\s+(\\S+)[\\r\\n]+/gi)].map(x => x[1])}}"
+      }
+    }
+  }]
+}

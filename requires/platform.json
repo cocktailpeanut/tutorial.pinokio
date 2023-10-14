@@ -12,7 +12,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "which rustc"
+      "message": "{{os.platform() === 'win32' ? 'where' : 'which'}} rustc"
     }
   }]
 }

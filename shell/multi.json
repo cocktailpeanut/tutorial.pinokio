@@ -3,8 +3,6 @@
     "method": "shell.run",
     "params": {
       "message": [
-        "eval \"$(conda shell.bash hook)\"",
-        "conda activate base",
         "ls",
         "ls -las",
         "ls *.json"

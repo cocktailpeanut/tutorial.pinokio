@@ -1,0 +1,26 @@
+{
+  "daemon": true,
+  "requires": [{
+    "type": "conda",
+    "name": "nodejs",
+    "args": "-c conda-forge"
+  }],
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "npx http-server",
+      "on": [{
+        "event": "/Hit CTRL-C to stop the server/i",
+        "done": true
+      }]
+    }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": {
+        "input": "{{input}}",
+        "match": "{{[...input.response.matchAll(/(http:\\S+)/gi)].map(x => x[1])}}"
+      }
+    }
+  }]
+}

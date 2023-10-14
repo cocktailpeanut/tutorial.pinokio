@@ -1,0 +1,15 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "pip install numpy",
+      "venv": "test_env"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{platform === 'win32' ? 'dir' : 'ls'}}",
+      "path": "test_env/lib/python3.10/site-packages"
+    }
+  }]
+}
