@@ -1,0 +1,12 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "sudo": true,
+      "message": [
+        "npm list -g",
+        "conda env list"
+      ]
+    }
+  }]
+}
