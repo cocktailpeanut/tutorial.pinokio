@@ -6,7 +6,7 @@
         "pip": "{{pip}}",
         "arch": "{{arch}}",
         "platform": "{{platform}}",
-        "gpu": "{{gpu ? gup : 'none'}}"
+        "gpu": "{{gpu ? gpu : 'none'}}"
       }
     }
   }]
