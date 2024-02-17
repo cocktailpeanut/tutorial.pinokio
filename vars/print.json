@@ -22,7 +22,9 @@
         "osInfo": "{{osInfo}}",
         "audio": "{{audio}}",
         "bluetooth": "{{bluetooth}}",
-        "graphics": "{{graphics}}"
+        "graphics": "{{graphics}}",
+        "env": "{{env}}",
+        "shell_env": "{{shell_env}}"
       }
     }
   }]
