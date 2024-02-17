@@ -9,5 +9,20 @@
         "gpu": "{{gpu ? gpu : 'none'}}"
       }
     }
+  }, {
+    "method": "log",
+    "params": {
+      "json2": {
+        "time": "{{time}}",
+        "system": "{{system}}",
+        "cpu": "{{cpu}}",
+        "mem": "{{mem}}",
+        "battery": "{{battery}}",
+        "shell": "{{shell}}",
+        "osInfo": "{{osInfo}}",
+        "audio": "{{audio}}",
+        "bluetooth": "{{bluetooth}}"
+      }
+    }
   }]
 }
