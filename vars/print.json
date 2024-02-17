@@ -21,7 +21,8 @@
         "shell": "{{shell}}",
         "osInfo": "{{osInfo}}",
         "audio": "{{audio}}",
-        "bluetooth": "{{bluetooth}}"
+        "bluetooth": "{{bluetooth}}",
+        "graphics": "{{graphics}}"
       }
     }
   }]
